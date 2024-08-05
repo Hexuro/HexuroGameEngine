@@ -1,6 +1,10 @@
 #include <iostream>
+#include "HexuroEngine/HexuroEngine.h"
+
+using namespace Hexuro;
 
 int main() {
-	std::cout << "Hello, world!\n";
+    Log::Init();
+    HX_GAME_INFO("Hello, world!");
 	return 0;
 }
