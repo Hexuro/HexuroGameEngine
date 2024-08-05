@@ -1,0 +1,8 @@
+# Output directory
+bin/
+
+# Intermidate directory
+obj/
+
+# Visual Studio cache directory
+.vs/
