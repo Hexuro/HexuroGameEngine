@@ -1,3 +1,5 @@
+#include "pch.hpp"
+
 #include "Window.h"
 
 namespace Hexuro {

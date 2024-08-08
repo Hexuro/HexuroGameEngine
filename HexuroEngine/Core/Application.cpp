@@ -1,3 +1,5 @@
+#include "pch.hpp"
+
 #include "Application.h"
 
 namespace Hexuro {

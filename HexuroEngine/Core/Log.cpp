@@ -1,3 +1,5 @@
+#include "pch.hpp"
+
 #include "Log.h"
 
 namespace Hexuro {
