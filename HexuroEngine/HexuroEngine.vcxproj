@@ -51,6 +51,12 @@
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgManifestInstall>false</VcpkgManifestInstall>
+    <VcpkgAutoLink>false</VcpkgAutoLink>
+    <VcpkgApplocalDeps>false</VcpkgApplocalDeps>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -66,7 +72,7 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\lib\$(Configuration);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>spdlog.lib;</AdditionalDependencies>
+      <AdditionalDependencies>spdlog.lib;glfw3.lib;</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -88,15 +94,24 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\lib\$(Configuration);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>spdlog.lib;</AdditionalDependencies>
+      <AdditionalDependencies>spdlog.lib;glfw3.lib;</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Application.h" />
+    <ClInclude Include="Core\EntryPoint.h" />
+    <ClInclude Include="Core\Utils.h" />
     <ClInclude Include="HexuroEngine.h" />
     <ClInclude Include="Core\Log.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Renderer\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\Log.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Renderer\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

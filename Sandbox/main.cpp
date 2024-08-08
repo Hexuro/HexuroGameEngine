@@ -3,8 +3,10 @@
 
 using namespace Hexuro;
 
-int main() {
-    Log::Init();
-    HX_GAME_INFO("Hello, world!");
-	return 0;
-}
+class SandboxApp : public Hexuro::Application {
+public:
+    SandboxApp() = default;
+    ~SandboxApp() override = default;
+};
+
+Hexuro::Application* Hexuro::CreateApplication() { return new SandboxApp; }
