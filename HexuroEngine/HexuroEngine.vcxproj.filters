@@ -7,13 +7,11 @@
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Core\Utils.h" />
-    <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Renderer\Window.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="pch.cpp" />
   </ItemGroup>
 </Project>
