@@ -10,6 +10,7 @@
 #include <random>
 #include <type_traits>
 #include <utility>
+#include <stdint.h>
 
 // Data structures
 #include <vector>
