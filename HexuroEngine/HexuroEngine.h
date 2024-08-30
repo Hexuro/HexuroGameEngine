@@ -5,4 +5,6 @@
 #include "Core/EntryPoint.h"
 #include "Core/Application.h"
 
+#include "imgui/imgui.h"
+
 #endif
