@@ -3,9 +3,14 @@
 
 namespace Hexuro {
 
-    struct Vector2
-    {
+    struct Vector3;
+
+    struct Vector2 {
         float x, y;
+    };
+
+    struct Vector3 {
+        float x, y, z;
     };
 
 }
