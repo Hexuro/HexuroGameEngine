@@ -11,6 +11,8 @@
     <ClInclude Include="Scene\Components.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\Entity.h" />
+    <ClInclude Include="Renderer\Renderer.h" />
+    <ClInclude Include="Core\Singleton.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -20,5 +22,6 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
+    <ClCompile Include="Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

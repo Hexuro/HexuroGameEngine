@@ -15,7 +15,7 @@ namespace Hexuro {
         bool ShouldClose();
 
     private:
-        GLFWwindow* m_window;
+        GLFWwindow* m_Window;
     };
 
 }

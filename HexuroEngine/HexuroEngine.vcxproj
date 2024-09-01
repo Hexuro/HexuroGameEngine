@@ -104,7 +104,9 @@
   <ItemGroup>
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Core\EntryPoint.h" />
+    <ClInclude Include="Core\Singleton.h" />
     <ClInclude Include="Core\Utils.h" />
+    <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="Scene\Entity.h" />
     <ClInclude Include="HexuroEngine.h" />
     <ClInclude Include="Core\Log.h" />
@@ -116,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\Log.cpp" />
+    <ClCompile Include="Renderer\Renderer.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="glad.cxx" />
     <ClCompile Include="pch.cpp">

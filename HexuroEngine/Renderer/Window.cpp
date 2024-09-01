@@ -11,13 +11,14 @@ namespace Hexuro {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        m_window = glfwCreateWindow(width, height, title, nullptr, nullptr);
-        if (m_window == NULL) {
+        m_Window = glfwCreateWindow(width, height, title, nullptr, nullptr);
+        if (m_Window == NULL) {
             glfwTerminate();
             HX_ENGINE_FATAL("Could not create GLFW window");
+            system("PAUSE");
         }
 
-        glfwMakeContextCurrent(m_window);
+        glfwMakeContextCurrent(m_Window);
         gladLoadGL();
         glViewport(0, 0, width, height);
 
@@ -30,13 +31,13 @@ namespace Hexuro {
         glClearColor(1, 1, 1, 1);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glfwSwapBuffers(m_window);
+        glfwSwapBuffers(m_Window);
         glfwPollEvents();
     }
 
     bool Window::ShouldClose()
     {
-        if (glfwWindowShouldClose(m_window))
+        if (glfwWindowShouldClose(m_Window))
             return true;
         return false;
     }
