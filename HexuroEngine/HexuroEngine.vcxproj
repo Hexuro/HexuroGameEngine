@@ -97,8 +97,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\lib\$(Configuration);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>spdlog.lib;glfw3.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>spdlog.lib;glfw3.lib;imgui.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
