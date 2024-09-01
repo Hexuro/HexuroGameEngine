@@ -8,6 +8,9 @@
     <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Core\Utils.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Scene\Components.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -15,5 +18,7 @@
     <ClCompile Include="Renderer\Window.cpp" />
     <ClCompile Include="glad.cxx" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\Entity.cpp" />
   </ItemGroup>
 </Project>
