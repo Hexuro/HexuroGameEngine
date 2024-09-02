@@ -8,7 +8,7 @@ namespace Hexuro {
     {
     public:
         Application() = default;
-        Application(std::string projectFile); //TODO: Make this and make the editor app open fromm it's HexuroEditor.hexproj file
+        Application(std::string projectFile); //TODO: Make this and make the editor app open fromm it's HexuroEditor.hxproj file
         virtual ~Application() = default;
 
         int Run();
