@@ -1,21 +1,19 @@
 #ifndef _HEXURO_APPLICATION_
 #define _HEXURO_APPLICATION_
 
-#include "../Renderer/Window.h"
+#include "Renderer/Window.h"
 
 namespace Hexuro {
     class Application
     {
     public:
         Application() = default;
-        Application(std::string projectFile); //TODO: Make this and make the editor app open fromm it's HexuroEditor.hxproj file
         virtual ~Application() = default;
 
         int Run();
-
-    private:
         int Init();
 
+    private:
         Window m_Window;
     };
 

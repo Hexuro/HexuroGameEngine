@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Application.h"
 
+#include "Renderer/Renderer.h"
+
 namespace Hexuro {
 
     int Application::Run()
@@ -20,6 +22,7 @@ namespace Hexuro {
     int Application::Init()
     {
         m_Window.Init(600, 600, "Hello, window!");
+        Renderer::Init(m_Window);
         return 0;
     }
 }

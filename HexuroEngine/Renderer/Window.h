@@ -3,19 +3,21 @@
 
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include "../Core/Log.h"
+#include "Core/Log.h"
 
 namespace Hexuro {
     class Window
     {
     public:
+        Window() {}
+
         int Init(int width, int height, const char* title);
         void Update();
         
         bool ShouldClose();
 
     private:
-        GLFWwindow* m_Window;
+        GLFWwindow* m_WindowHandle;
     };
 
 }
