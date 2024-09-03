@@ -17,6 +17,7 @@
     <ClInclude Include="Renderer\OpenGL\IndexBuffer.h" />
     <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
     <ClInclude Include="Renderer\OpenGL\Shader.h" />
+    <ClInclude Include="Core\Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />

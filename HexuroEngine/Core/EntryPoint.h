@@ -10,7 +10,6 @@ int main(int argc, char** argv)
 {
     Hexuro::Log::Init();
     Hexuro::Application* app = Hexuro::CreateApplication();
-    HX_ENGINE_INFO("Succesfully initialized the Hexuro Engine");
 
     return app->Run();
 }

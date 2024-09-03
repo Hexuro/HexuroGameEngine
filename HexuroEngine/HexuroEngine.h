@@ -2,9 +2,12 @@
 #define _HEXURE_ENGINE_
 
 /* Core */
-#include "Core/Log.h"
-#include "Core/EntryPoint.h"
 #include "Core/Application.h"
+#include "Core/EntryPoint.h"
+#include "Core/Log.h"
+#include "Core/Singleton.h"
+#include "Core/Timer.h"
+#include "Core/Utils.h"
 
 /* Entity Component System */
 #include "Scene/Scene.h"
@@ -12,7 +15,8 @@
 #include "Scene/Components.h"
 
 /* Rendering */
-#include "imgui/imgui.h"
+#include "Renderer/Window.h"
+#include "Renderer/Renderer.h"
 
 /* Scripting */
 
