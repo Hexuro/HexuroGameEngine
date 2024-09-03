@@ -26,6 +26,9 @@ namespace Hexuro {
         operator std::string() { return tag; }
     };
 
+    struct SpriteComponent {
+
+    };
 }
 
 #endif // !_HEXURO_COMPONENTS_

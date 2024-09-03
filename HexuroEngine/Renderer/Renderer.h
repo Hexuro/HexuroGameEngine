@@ -2,6 +2,7 @@
 #define _HEXURO_RENDERER_
 
 #include "Window.h"
+#include "Scene/Scene.h"
 #include "OpenGL/VertexArray.h"
 #include "OpenGL/IndexBuffer.h"
 #include "OpenGL/Shader.h"
@@ -11,6 +12,7 @@ namespace Hexuro {
     public:
         static int Init(Window& window);
 
+        static int Render(Scene* scene);
         static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader);
 
     private:

@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Renderer.h"
 
+#include "Scene/Components.h"
+
 namespace Hexuro {
     Window tempWindow;
 
@@ -10,6 +12,16 @@ namespace Hexuro {
     {
         m_Window = window;
         HX_ENGINE_TRACE("Initialized the Hexuro Engine renderer");
+        return 0;
+    }
+
+    int Renderer::Render(Scene* scene)
+    {
+        auto view = scene->m_Registry.view<SpriteComponent, TransformComponent>();
+        for (auto entity : view) {
+
+        }
+
         return 0;
     }
 
