@@ -15,9 +15,12 @@ namespace Hexuro {
         void Update();
         
         bool ShouldClose();
+        void PollEvents() { glfwPollEvents(); }
 
     private:
         GLFWwindow* m_WindowHandle;
+
+        friend class Renderer;
     };
 
 }

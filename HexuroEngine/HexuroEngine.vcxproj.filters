@@ -13,6 +13,10 @@
     <ClInclude Include="Scene\Entity.h" />
     <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="Core\Singleton.h" />
+    <ClInclude Include="Renderer\OpenGL\VertexBuffer.h" />
+    <ClInclude Include="Renderer\OpenGL\IndexBuffer.h" />
+    <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
+    <ClInclude Include="Renderer\OpenGL\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -23,5 +27,13 @@
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
+    <ClCompile Include="Renderer\OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="Renderer\OpenGL\IndexBuffer.cpp" />
+    <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Renderer\OpenGL\default.vert" />
+    <None Include="Renderer\OpenGL\default.frag" />
   </ItemGroup>
 </Project>

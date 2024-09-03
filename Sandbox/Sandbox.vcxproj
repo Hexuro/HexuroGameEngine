@@ -93,6 +93,9 @@
       <Project>{d8876d4d-a5b9-4caa-980d-6ee488ffa9f8}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sandbox.hexproj" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
