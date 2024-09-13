@@ -12,6 +12,7 @@ namespace Hexuro {
 
         int Run();
         int Init();
+        int Shutdown();
 
     private:
         Window m_Window;

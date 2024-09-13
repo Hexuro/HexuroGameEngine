@@ -2,6 +2,7 @@
 #define _HEXURO_COMPONENTS_
 
 #include "Core/Utils.h"
+#include "Renderer/Color.h"
 #include <string>
 
 namespace Hexuro {
@@ -27,7 +28,7 @@ namespace Hexuro {
     };
 
     struct SpriteComponent {
-
+        Color color;
     };
 }
 

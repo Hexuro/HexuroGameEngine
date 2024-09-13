@@ -38,13 +38,20 @@ namespace Hexuro {
             m_Window.PollEvents();
         }
 
-        return 0;
+        if (!Shutdown())
+            return 0;
     }
 
     int Application::Init()
     {
         m_Window.Init(600, 600, "Hello, window!");
         Renderer::Init(m_Window);
+        return 0;
+    }
+
+    int Application::Shutdown()
+    {
+        HX_ENGINE_INFO("Succesfully terminated the application");
         return 0;
     }
 }
