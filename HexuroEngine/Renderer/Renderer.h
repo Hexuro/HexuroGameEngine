@@ -8,6 +8,10 @@
 #include "OpenGL/Shader.h"
 
 namespace Hexuro {
+    namespace Callbacks {
+        void FramebufferResizeCallback(GLFWwindow* window, int width, int height);
+    }
+
     class Renderer {
     public:
         static int Init(Window& window);

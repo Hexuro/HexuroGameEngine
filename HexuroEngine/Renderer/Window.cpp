@@ -2,6 +2,13 @@
 #include "Window.h"
 
 namespace Hexuro {
+    namespace Callbacks {
+        void FramebufferResizeCallback(GLFWwindow* window, int width, int height)
+        {
+            glViewport(0, 0, width, height);
+        }
+    }
+
     int Window::Init(int width, int height, const char* title)
     {
         if (!glfwInit())
@@ -21,10 +28,13 @@ namespace Hexuro {
         glfwMakeContextCurrent(m_WindowHandle);
         if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
         {
-            std::cout << "Failed to initialize GLAD" << std::endl;
+            HX_ENGINE_FATAL("Failed to initialize GLAD");
             return -1;
         }
         glViewport(0, 0, width, height);
+
+        /* Setting GLFW callbacks */
+        glfwSetFramebufferSizeCallback(m_WindowHandle, Callbacks::FramebufferResizeCallback);
 
         HX_ENGINE_TRACE("Initialized the Hexuro Engine window");
         return 0;
@@ -45,5 +55,6 @@ namespace Hexuro {
             return true;
         return false;
     }
+
 
 }

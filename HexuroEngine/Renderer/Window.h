@@ -6,6 +6,10 @@
 #include "Core/Log.h"
 
 namespace Hexuro {
+    namespace Callbacks {
+
+    }
+
     class Window
     {
     public:
@@ -13,9 +17,9 @@ namespace Hexuro {
 
         int Init(int width, int height, const char* title);
         void Update();
-        
-        bool ShouldClose();
+
         void PollEvents() { glfwPollEvents(); }
+        bool ShouldClose();
 
     private:
         GLFWwindow* m_WindowHandle;
