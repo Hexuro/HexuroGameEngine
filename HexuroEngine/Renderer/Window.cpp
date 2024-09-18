@@ -1,13 +1,9 @@
 #include "pch.h"
 #include "Window.h"
 
+#include "Renderer/Renderer.h"
+
 namespace Hexuro {
-    namespace Callbacks {
-        void FramebufferResizeCallback(GLFWwindow* window, int width, int height)
-        {
-            glViewport(0, 0, width, height);
-        }
-    }
 
     int Window::Init(int width, int height, const char* title)
     {
@@ -34,7 +30,7 @@ namespace Hexuro {
         glViewport(0, 0, width, height);
 
         /* Setting GLFW callbacks */
-        glfwSetFramebufferSizeCallback(m_WindowHandle, Callbacks::FramebufferResizeCallback);
+        glfwSetFramebufferSizeCallback(m_WindowHandle, Renderer::FramebufferResizeCallback);
 
         HX_ENGINE_TRACE("Initialized the Hexuro Engine window");
         return 0;

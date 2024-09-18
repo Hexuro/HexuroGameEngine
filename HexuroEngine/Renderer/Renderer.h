@@ -19,6 +19,8 @@ namespace Hexuro {
         static int Render(Scene* scene);
         static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader);
 
+        static void FramebufferResizeCallback(GLFWwindow* window, int width, int height) { glViewport(0, 0, width, height); }
+
     private:
         static Window& m_Window;
     };
