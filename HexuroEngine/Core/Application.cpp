@@ -40,8 +40,11 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
-            shader.Activate();
-            glUniform1f(scaleUniform, 0.5);
+            //TODO: Remove
+            {
+                shader.Activate();
+                glUniform1f(scaleUniform, 0.5);
+            }
             Renderer::Render(VAO, EBO, shader);
             m_Window.PollEvents();
         }
