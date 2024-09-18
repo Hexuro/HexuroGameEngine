@@ -120,6 +120,7 @@
     <ClInclude Include="Scene\Components.h" />
     <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
     <ClInclude Include="Renderer\OpenGL\Shader.h" />
+    <ClInclude Include="Renderer\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Application.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="Renderer\OpenGL\IndexBuffer.cpp" />
     <ClCompile Include="Renderer\OpenGL\VertexBuffer.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
+    <ClCompile Include="Renderer\stb_image.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="glad.cxx" />
     <ClCompile Include="pch.cpp">
@@ -139,6 +141,7 @@
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
     <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
+    <ClCompile Include="Renderer\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Renderer\OpenGL\default.frag" />

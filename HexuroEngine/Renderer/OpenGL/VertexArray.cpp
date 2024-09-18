@@ -7,10 +7,10 @@ namespace Hexuro {
         glGenVertexArrays(1, &ID);
     }
 
-    void VertexArray::LinkVertexBuffer(VertexBuffer& VertexBuffer, GLuint layout)
+    void VertexArray::LinkAttribute(VertexBuffer& VertexBuffer, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset)
     {
         VertexBuffer.Bind();
-        glVertexAttribPointer(layout, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        glVertexAttribPointer(layout, numComponents, GL_FLOAT, type, stride, offset);
         glEnableVertexAttribArray(layout);
         VertexBuffer.Unbind();
     }
