@@ -13,6 +13,11 @@ namespace Hexuro {
         void Bind();
         void Unbind();
         void Delete();
+
+        uint32_t GetSize() { return m_BufferSize; }
+
+    private:
+        uint32_t m_BufferSize; // Size of indicies
     };
 
 }

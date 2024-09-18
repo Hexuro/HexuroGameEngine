@@ -33,7 +33,7 @@ namespace Hexuro {
         shader.Activate();
         vertexArray.Bind();
 
-        glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, indexBuffer.GetSize(), GL_UNSIGNED_INT, 0);
         glfwSwapBuffers(m_Window.m_WindowHandle);
 
         return 0;
