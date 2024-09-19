@@ -6,6 +6,7 @@
 #include "OpenGL/VertexArray.h"
 #include "OpenGL/IndexBuffer.h"
 #include "OpenGL/Shader.h"
+#include "OpenGL/Texture.h"
 
 namespace Hexuro {
 
@@ -15,6 +16,7 @@ namespace Hexuro {
 
         static int Render(Scene* scene);
         static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader);
+        static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader, Texture texture);
 
         static void FramebufferResizeCallback(GLFWwindow* window, int width, int height) { glViewport(0, 0, width, height); }
 

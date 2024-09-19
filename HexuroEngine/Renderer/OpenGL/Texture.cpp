@@ -9,14 +9,19 @@ namespace Hexuro {
     {
         //TODO(ViktorPopp): finish shader tutorial
         glGenTextures(1, &ID);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, ID);
 
+        // str = xyz
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
+        stbi_set_flip_vertically_on_load(true);
         m_Data = stbi_load(filepath, &m_Width, &m_Height, &m_NumColorChannel, 0);
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_Data);
 
         if (m_Data) {
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, m_Data);
@@ -25,5 +30,7 @@ namespace Hexuro {
         }
         else
             HX_ENGINE_ERROR("Failed to load texture: {0}", filepath);
+
+        stbi_image_free(m_Data);
     }
 }

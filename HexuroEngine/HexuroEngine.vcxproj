@@ -120,7 +120,7 @@
     <ClInclude Include="Scene\Components.h" />
     <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
     <ClInclude Include="Renderer\OpenGL\Shader.h" />
-    <ClInclude Include="Renderer\Texture.h" />
+    <ClInclude Include="Renderer\OpenGL\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Application.cpp" />
@@ -141,7 +141,7 @@
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
     <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
-    <ClCompile Include="Renderer\Texture.cpp" />
+    <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Renderer\OpenGL\default.frag" />

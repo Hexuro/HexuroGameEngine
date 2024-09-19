@@ -2,14 +2,18 @@
 #define _HEXURO_TEXTURE_
 
 #include "stb/stb_image.h"
+#include "glad/glad.h"
 
 namespace Hexuro {
     class Texture {
     public:
-        unsigned int ID;
+        uint32_t ID;
 
-        Texture() {}
         Texture(const char* filepath, bool genMipmap);
+
+        void Bind()  { glBindTexture(GL_TEXTURE_2D, ID); }
+        void UnBind() { glBindTexture(GL_TEXTURE_2D, 0); }
+        void Delete() { glDeleteTextures(1, &ID); }
 
     private:
         int m_Height, m_Width;

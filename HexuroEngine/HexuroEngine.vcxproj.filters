@@ -19,7 +19,7 @@
     <ClInclude Include="Renderer\OpenGL\Shader.h" />
     <ClInclude Include="Core\Timer.h" />
     <ClInclude Include="Renderer\Color.h" />
-    <ClInclude Include="Renderer\Texture.h" />
+    <ClInclude Include="Renderer\OpenGL\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -35,7 +35,7 @@
     <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
     <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
     <ClCompile Include="Renderer\stb_image.cpp" />
-    <ClCompile Include="Renderer\Texture.cpp" />
+    <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Renderer\OpenGL\default.vert" />

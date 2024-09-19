@@ -38,4 +38,19 @@ namespace Hexuro {
 
         return 0;
     }
+
+    int Renderer::Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader, Texture texture)
+    {
+        glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        shader.Activate();
+        texture.Bind();
+        vertexArray.Bind();
+
+        glDrawElements(GL_TRIANGLES, indexBuffer.GetSize(), GL_UNSIGNED_INT, 0);
+        glfwSwapBuffers(m_Window.m_WindowHandle);
+
+        return 0;
+    }
 }
