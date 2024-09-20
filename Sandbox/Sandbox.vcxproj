@@ -65,6 +65,12 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>call cd $(ProjectDir)
+call python3 custom-post-build-step.py $(Configuration)-$(Platform) $(ProjectName)</Command>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -84,6 +90,12 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>call cd $(ProjectDir)
+call python3 custom-post-build-step.py $(Configuration)-$(Platform) $(ProjectName)</Command>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Sandbox.cpp" />
@@ -94,7 +106,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\default.frag" />
+    <None Include="Assets\default.vert" />
+    <None Include="custom-post-build-step.py" />
     <None Include="Sandbox.hexproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\pew_pew.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Grass_Block.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

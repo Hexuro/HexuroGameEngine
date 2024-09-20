@@ -37,8 +37,4 @@
     <ClCompile Include="Renderer\stb_image.cpp" />
     <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Renderer\OpenGL\default.vert" />
-    <None Include="Renderer\OpenGL\default.frag" />
-  </ItemGroup>
 </Project>

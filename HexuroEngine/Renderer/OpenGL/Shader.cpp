@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Shader.h"
 
+#include "Core/Log.h"
+
 namespace Hexuro {
     std::string GetFileContents(const char* filename)
     {
@@ -15,6 +17,7 @@ namespace Hexuro {
             in.close();
             return(contents);
         }
+        HX_ENGINE_ERROR("Could not get contents from file: {0}", filename);
         throw(errno);
     }
 
