@@ -40,7 +40,7 @@ namespace Hexuro {
         GLuint scaleUniform = glGetUniformLocation(shader.ID, "scale");
         GLuint texture0Uniform = glGetUniformLocation(shader.ID, "tex0");
 
-        Texture texture("Grass_Block.jpg", true);
+        Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
 
         while (!m_Window.ShouldClose())
         {

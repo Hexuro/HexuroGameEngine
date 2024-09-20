@@ -4,16 +4,20 @@
 #include "stb/stb_image.h"
 #include "glad/glad.h"
 
+#include "Shader.h"
+
 namespace Hexuro {
     class Texture {
     public:
         uint32_t ID;
 
-        Texture(const char* filepath, bool genMipmap);
+        Texture(const char* filepath, bool genMipmap, GLenum slot, GLenum format);
 
         void Bind()  { glBindTexture(GL_TEXTURE_2D, ID); }
         void UnBind() { glBindTexture(GL_TEXTURE_2D, 0); }
         void Delete() { glDeleteTextures(1, &ID); }
+
+        void SetUniform(Shader& shader, const char* uniform, GLuint unit);
 
     private:
         int m_Height, m_Width;

@@ -5,11 +5,11 @@
 #include "Core/Log.h"
 
 namespace Hexuro {
-    Texture::Texture(const char* filepath, bool genMipmap)
+    Texture::Texture(const char* filepath, bool genMipmap, GLenum slot, GLenum format)
     {
         //TODO(ViktorPopp): finish shader tutorial
         glGenTextures(1, &ID);
-        glActiveTexture(GL_TEXTURE0);
+        glActiveTexture(slot);
         glBindTexture(GL_TEXTURE_2D, ID);
 
         // str = xyz
@@ -24,7 +24,7 @@ namespace Hexuro {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_Data);
 
         if (m_Data) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, m_Data);
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, format, GL_UNSIGNED_BYTE, m_Data);
             if (genMipmap)
                 glGenerateMipmap(GL_TEXTURE_2D);
         }
@@ -32,5 +32,15 @@ namespace Hexuro {
             HX_ENGINE_ERROR("Failed to load texture: {0}", filepath);
 
         stbi_image_free(m_Data);
+    }
+
+    void Texture::SetUniform(Shader& shader, const char* uniform, GLuint unit)
+    {
+        // Gets the location of the uniform
+        GLuint theUniform = glGetUniformLocation(shader.ID, uniform);
+        // Shader needs to be activated before changing the value of a uniform
+        shader.Activate();
+        // Sets the value of the uniform
+        glUniform1i(theUniform, unit);
     }
 }
