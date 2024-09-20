@@ -20,6 +20,8 @@ namespace Hexuro {
 
         static void FramebufferResizeCallback(GLFWwindow* window, int width, int height) { glViewport(0, 0, width, height); }
 
+        static void SetUniform1f(const Shader& shader, const char* uniform, GLfloat value);
+
     private:
         static Window& m_Window;
     };

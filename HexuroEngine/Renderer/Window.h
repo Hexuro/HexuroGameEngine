@@ -13,7 +13,7 @@ namespace Hexuro {
     class Window
     {
     public:
-        Window() {}
+        Window() = default;
 
         int Init(int width, int height, const char* title);
         void Update();
@@ -21,8 +21,11 @@ namespace Hexuro {
         void PollEvents() { glfwPollEvents(); }
         bool ShouldClose();
 
+        uint32_t GetWidth() { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return w; }
+        uint32_t GetHeight() { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return h; }
+
     private:
-        GLFWwindow* m_WindowHandle;
+        GLFWwindow* m_WindowHandle = nullptr;
 
         friend class Renderer;
     };

@@ -2,6 +2,7 @@
 #include "Renderer.h"
 
 #include "Scene/Components.h"
+#include "glad/glad.h"
 
 namespace Hexuro {
     Window tempWindow;
@@ -52,5 +53,11 @@ namespace Hexuro {
         glfwSwapBuffers(m_Window.m_WindowHandle);
 
         return 0;
+    }
+
+    void Renderer::SetUniform1f(const Shader& shader, const char* uniform, GLfloat value)
+    {
+        glUseProgram(shader.ID); //TODO: Remove
+        glUniform1f(glGetUniformLocation(shader.ID, uniform), value);
     }
 }

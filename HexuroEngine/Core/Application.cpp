@@ -4,6 +4,10 @@
 #include "Renderer/Renderer.h"
 #include "stb/stb_image.h"
 
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
+
 namespace Hexuro {
 
     int Application::Run()
@@ -49,7 +53,6 @@ namespace Hexuro {
                 shader.Activate();
                 glUniform1f(scaleUniform, 0.5);
                 glUniform1f(texture0Uniform, 0);
-                
             }
             Renderer::Render(VAO, EBO, shader, texture);
             m_Window.PollEvents();
