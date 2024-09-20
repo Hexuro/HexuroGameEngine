@@ -5,5 +5,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Sandbox.hexproj" />
+    <None Include="custom-post-build-step.py" />
+    <None Include="Assets\default.frag" />
+    <None Include="Assets\default.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\pew_pew.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Grass_Block.jpg" />
   </ItemGroup>
 </Project>

@@ -143,10 +143,6 @@
     <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
     <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Renderer\OpenGL\default.frag" />
-    <None Include="Renderer\OpenGL\default.vert" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
