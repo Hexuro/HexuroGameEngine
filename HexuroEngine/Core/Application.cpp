@@ -42,7 +42,6 @@ namespace Hexuro {
         VAO.LinkAttribute(VBO, 1, 3, GL_FLOAT, 8 * sizeof(float), (void*)(3 * sizeof(float)));
         VAO.LinkAttribute(VBO, 2, 2, GL_FLOAT, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 
-        GLuint scaleUniform = glGetUniformLocation(shader.ID, "scale");
         GLuint texture0Uniform = glGetUniformLocation(shader.ID, "tex0");
 
         Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
@@ -59,7 +58,6 @@ namespace Hexuro {
             projectionMatrix = glm::perspective(glm::radians(45.0f), (float)(m_Window.GetWidth() / (float)m_Window.GetHeight()), 0.1f, 100.0f);
 
             shader.Activate();
-            glUniform1f(scaleUniform, 0.5);
             glUniform1f(texture0Uniform, 0);
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "modelMatrix"), 1, GL_FALSE, glm::value_ptr(modelMatrix));
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "viewMatrix"), 1, GL_FALSE, glm::value_ptr(viewMatrix));
