@@ -6,14 +6,16 @@ layout (location = 2) in vec2 aTex;
 out vec3 color;
 out vec2 texCoord;
 
-uniform float scale;
-uniform mat4 modelMatrix;
-uniform mat4 viewMatrix;
-uniform mat4 projectionMatrix;
+//uniform float scale;
+//uniform mat4 modelMatrix;
+//uniform mat4 viewMatrix;
+//uniform mat4 projectionMatrix;
+
+uniform mat4 cameraMatrix;
 
 void main()
 {
-   gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(aPos, 1.0);
+   gl_Position = cameraMatrix * vec4(aPos, 1.0);
    color = aColor;
    texCoord = aTex;
 }
