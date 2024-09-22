@@ -45,6 +45,7 @@ namespace Hexuro {
         Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
         texture.SetUniform(shader, "tex0", 0);
 
+        //Camera camera(m_Window.GetWidth(), m_Window.GetHeight(), glm::vec3(0.0f, 0.0f, 2.0f));
 
         while (!m_Window.ShouldClose())
         {
@@ -54,8 +55,6 @@ namespace Hexuro {
 
             viewMatrix = glm::translate(viewMatrix, glm::vec3(0.0f, -0.5f, -2.0f));
             projectionMatrix = glm::perspective(glm::radians(45.0f), (float)(m_Window.GetWidth() / (float)m_Window.GetHeight()), 0.1f, 100.0f);
-
-            texture.SetUniform(shader, "tex0", 0);
 
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "modelMatrix"), 1, GL_FALSE, glm::value_ptr(modelMatrix));
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "viewMatrix"), 1, GL_FALSE, glm::value_ptr(viewMatrix));
