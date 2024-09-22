@@ -48,8 +48,6 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
-            
-
             glm::mat4 modelMatrix = glm::mat4(1.0f);
             glm::mat4 viewMatrix = glm::mat4(1.0f);
             glm::mat4 projectionMatrix = glm::mat4(1.0f);
@@ -59,6 +57,7 @@ namespace Hexuro {
 
             shader.Activate();
             glUniform1f(texture0Uniform, 0);
+
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "modelMatrix"), 1, GL_FALSE, glm::value_ptr(modelMatrix));
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "viewMatrix"), 1, GL_FALSE, glm::value_ptr(viewMatrix));
             glUniformMatrix4fv(glGetUniformLocation(shader.ID, "projectionMatrix"), 1, GL_FALSE, glm::value_ptr(projectionMatrix));
