@@ -12,6 +12,7 @@ namespace Hexuro {
     int Renderer::Init(Window& window)
     {
         m_Window = window;
+        glEnable(GL_DEPTH_TEST);
         HX_ENGINE_TRACE("Initialized the Hexuro Engine renderer");
         return 0;
     }
