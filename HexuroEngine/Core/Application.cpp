@@ -43,6 +43,8 @@ namespace Hexuro {
         VAO.LinkAttribute(VBO, 2, 2, GL_FLOAT, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 
         Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
+        texture.SetUniform(shader, "tex0", 0);
+
 
         while (!m_Window.ShouldClose())
         {
