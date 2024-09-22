@@ -21,8 +21,8 @@ namespace Hexuro {
         void PollEvents() { glfwPollEvents(); }
         bool ShouldClose();
 
-        uint32_t GetWidth() { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return w; }
-        uint32_t GetHeight() { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return h; }
+        uint32_t GetWidth() const { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return w; }
+        uint32_t GetHeight() const { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return h; }
 
     private:
         GLFWwindow* m_WindowHandle = nullptr;

@@ -102,6 +102,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Renderer\OpenGL\Camera.h" />
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Core\EntryPoint.h" />
     <ClInclude Include="Core\Singleton.h" />
@@ -123,6 +124,7 @@
     <ClInclude Include="Renderer\OpenGL\Texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Renderer\OpenGL\Camera.cpp" />
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\Log.cpp" />
     <ClCompile Include="Renderer\OpenGL\IndexBuffer.cpp" />
