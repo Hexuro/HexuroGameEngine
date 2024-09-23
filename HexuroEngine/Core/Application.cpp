@@ -38,9 +38,9 @@ namespace Hexuro {
 
         VertexBuffer VBO(vertices, sizeof(vertices));
         IndexBuffer EBO(indices, sizeof(indices));
-        VAO.LinkAttribute(VBO, 0, 3, GL_FLOAT, 8 * sizeof(float), (void*)0);
-        VAO.LinkAttribute(VBO, 1, 3, GL_FLOAT, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-        VAO.LinkAttribute(VBO, 2, 2, GL_FLOAT, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+        VAO.LinkAttribute(VBO, 0, 3, GL_FLOAT, 8 * sizeof(float), (void*)0);                    // Position
+        VAO.LinkAttribute(VBO, 1, 3, GL_FLOAT, 8 * sizeof(float), (void*)(3 * sizeof(float)));  // Color
+        VAO.LinkAttribute(VBO, 2, 2, GL_FLOAT, 8 * sizeof(float), (void*)(6 * sizeof(float)));  // Texure
 
         Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
         texture.SetUniform(shader, "tex0", 0);
