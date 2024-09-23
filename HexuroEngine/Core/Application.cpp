@@ -49,18 +49,6 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
-           // Old code
-           //glm::mat4 modelMatrix = glm::mat4(1.0f);
-           //glm::mat4 viewMatrix = glm::mat4(1.0f);
-           //glm::mat4 projectionMatrix = glm::mat4(1.0f);
-           //
-           //viewMatrix = glm::translate(viewMatrix, glm::vec3(0.0f, -0.5f, -2.0f));
-           //projectionMatrix = glm::perspective(glm::radians(45.0f), (float)(m_Window.GetWidth() / (float)m_Window.GetHeight()), 0.1f, 100.0f);
-           //
-           //glUniformMatrix4fv(glGetUniformLocation(shader.ID, "modelMatrix"), 1, GL_FALSE, glm::value_ptr(modelMatrix));
-           //glUniformMatrix4fv(glGetUniformLocation(shader.ID, "viewMatrix"), 1, GL_FALSE, glm::value_ptr(viewMatrix));
-           //glUniformMatrix4fv(glGetUniformLocation(shader.ID, "projectionMatrix"), 1, GL_FALSE, glm::value_ptr(projectionMatrix));
-
             camera.Matrix(90.0f, 0.1f, 100.0f, shader, "cameraMatrix", m_Window);
 
             Renderer::Render(VAO, EBO, shader, texture);

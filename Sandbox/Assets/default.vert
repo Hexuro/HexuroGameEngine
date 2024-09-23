@@ -6,11 +6,6 @@ layout (location = 2) in vec2 aTex;
 out vec3 color;
 out vec2 texCoord;
 
-//uniform float scale;
-//uniform mat4 modelMatrix;
-//uniform mat4 viewMatrix;
-//uniform mat4 projectionMatrix;
-
 uniform mat4 cameraMatrix;
 
 void main()
