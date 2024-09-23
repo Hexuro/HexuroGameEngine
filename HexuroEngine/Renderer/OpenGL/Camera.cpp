@@ -2,6 +2,9 @@
 #include "Camera.h"
 
 namespace Hexuro {
+    uint32_t Camera::m_WindowWidth;
+    uint32_t Camera::m_WindowHeight;
+
     Camera::Camera(uint32_t width, uint32_t height, glm::vec3 pos)
     {
         m_WindowWidth = width;
@@ -9,7 +12,7 @@ namespace Hexuro {
         position = pos;
     }
 
-    void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform)
+    void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform, const Window& window)
     {
         glm::mat4 view = glm::mat4(1.0f);
         glm::mat4 projection = glm::mat4(1.0f);

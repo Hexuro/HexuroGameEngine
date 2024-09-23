@@ -10,6 +10,7 @@
 #include<glm/gtx/vector_angle.hpp>
 #include <stdint.h>
 #include "Shader.h"
+#include "Renderer/Window.h"
 
 namespace Hexuro {
     class Camera {
@@ -17,7 +18,7 @@ namespace Hexuro {
         Camera(uint32_t width, uint32_t height, glm::vec3 pos);
 
         // Updates and exports the camera matrix to the Vertex Shader
-        void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform);
+        void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform, const Window& window);
         void Inputs(GLFWwindow* window);
 
         glm::vec3 position;
@@ -27,9 +28,8 @@ namespace Hexuro {
         float speed = 0.1f;
         float sensitivity = 100.0f;
 
-    private:
-        uint32_t m_WindowWidth;
-        uint32_t m_WindowHeight;
+        static uint32_t m_WindowWidth;
+        static uint32_t m_WindowHeight;
     };
 
 }

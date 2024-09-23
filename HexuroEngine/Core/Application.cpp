@@ -61,7 +61,7 @@ namespace Hexuro {
            //glUniformMatrix4fv(glGetUniformLocation(shader.ID, "viewMatrix"), 1, GL_FALSE, glm::value_ptr(viewMatrix));
            //glUniformMatrix4fv(glGetUniformLocation(shader.ID, "projectionMatrix"), 1, GL_FALSE, glm::value_ptr(projectionMatrix));
 
-            camera.Matrix(45.0f, 0.1f, 100.0f, shader, "cameraMatrix");
+            camera.Matrix(90.0f, 0.1f, 100.0f, shader, "cameraMatrix", m_Window);
 
             Renderer::Render(VAO, EBO, shader, texture);
             m_Window.PollEvents();

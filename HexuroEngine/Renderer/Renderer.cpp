@@ -3,6 +3,7 @@
 
 #include "Scene/Components.h"
 #include "glad/glad.h"
+#include "OpenGL/Camera.h"
 
 namespace Hexuro {
     Window tempWindow;
@@ -53,6 +54,19 @@ namespace Hexuro {
         glfwSwapBuffers(m_Window.m_WindowHandle);
 
         return 0;
+    }
+
+    void Renderer::FramebufferResizeCallback(GLFWwindow* window, int width, int height)
+    {
+        glViewport(0, 0, width, height);
+
+        int windowWidth;
+        int windowHeight;
+
+        glfwGetWindowSize(window, &windowWidth, &windowHeight);
+
+        Camera::m_WindowHeight = windowHeight;
+        Camera::m_WindowWidth = windowWidth;
     }
 
     void Renderer::SetUniform1f(const Shader& shader, const char* uniform, GLfloat value)
