@@ -7,6 +7,7 @@
 namespace Hexuro {
     Texture::Texture(const char* filepath, bool genMipmap, GLenum slot, GLenum format)
     {
+        //TODO(ViktorPopp): finish shader tutorial
         glGenTextures(1, &ID);
         glActiveTexture(slot);
         glBindTexture(GL_TEXTURE_2D, ID);

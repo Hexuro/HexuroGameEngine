@@ -14,6 +14,10 @@ namespace Hexuro {
         //TODO: create the VertexBufferLayout class as a input til a function with the same name.
         void LinkAttribute(VertexBuffer& VertexBuffer, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
 
+        void LinkPosition(VertexBuffer& VertexBuffer);
+        void LinkColor(VertexBuffer& VertexBuffer);
+        void LinkTexCoord(VertexBuffer& VertexBuffer);
+
         void Bind();
         void Unbind();
         void Delete();

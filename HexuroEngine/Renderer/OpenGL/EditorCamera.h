@@ -13,9 +13,9 @@
 #include "Renderer/Window.h"
 
 namespace Hexuro {
-    class Camera {
+    class EditorCamera {
     public:
-        Camera(uint32_t width, uint32_t height, glm::vec3 pos);
+        EditorCamera(uint32_t width, uint32_t height, glm::vec3 pos);
 
         // Updates and exports the camera matrix to the Vertex Shader
         void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform, const Window& window);
@@ -25,7 +25,7 @@ namespace Hexuro {
         glm::vec3 orientation = glm::vec3(0.0f, 0.0f, -1.0f);
         glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
 
-        float speed = 0.1f;
+        float speed = 0.01f;
         float sensitivity = 100.0f;
 
         static uint32_t m_WindowWidth;

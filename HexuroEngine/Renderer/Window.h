@@ -24,6 +24,8 @@ namespace Hexuro {
         uint32_t GetWidth() const { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return w; }
         uint32_t GetHeight() const { int w, h; glfwGetWindowSize(m_WindowHandle, &w, &h); return h; }
 
+        GLFWwindow* GetHandle() const { return m_WindowHandle; }
+
     private:
         GLFWwindow* m_WindowHandle = nullptr;
 

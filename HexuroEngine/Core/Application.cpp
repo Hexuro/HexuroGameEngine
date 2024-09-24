@@ -2,7 +2,7 @@
 #include "Application.h"
 
 #include "Renderer/Renderer.h"
-#include "Renderer/OpenGL/Camera.h"
+#include "Renderer/OpenGL/EditorCamera.h"
 #include "stb/stb_image.h"
 
 #include "glm/glm.hpp"
@@ -45,10 +45,11 @@ namespace Hexuro {
         Texture texture("Grass_Block.jpg", true, GL_TEXTURE0, GL_RGB);
         texture.SetUniform(shader, "tex0", 0);
 
-        Camera camera(m_Window.GetWidth(), m_Window.GetHeight(), glm::vec3(0.0f, 0.0f, 2.0f));
+        EditorCamera camera(m_Window.GetWidth(), m_Window.GetHeight(), glm::vec3(0.0f, 0.0f, 2.0f));
 
         while (!m_Window.ShouldClose())
         {
+            camera.Inputs(m_Window.GetHandle());
             camera.Matrix(90.0f, 0.1f, 100.0f, shader, "cameraMatrix", m_Window);
 
             Renderer::Render(VAO, EBO, shader, texture);
