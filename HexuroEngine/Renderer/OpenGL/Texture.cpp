@@ -20,8 +20,6 @@ namespace Hexuro {
         stbi_set_flip_vertically_on_load(true);
         m_Data = stbi_load(filepath, &m_Width, &m_Height, &m_NumColorChannel, 0);
 
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_Data);
-
         if (m_Data) {
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, format, GL_UNSIGNED_BYTE, m_Data);
             if (genMipmap)
