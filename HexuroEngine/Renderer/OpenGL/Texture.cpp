@@ -29,6 +29,8 @@ namespace Hexuro {
             HX_ENGINE_ERROR("Failed to load texture: {0}", filepath);
 
         stbi_image_free(m_Data);
+
+        UnBind();
     }
 
     void Texture::SetUniform(Shader& shader, const char* uniform, GLuint unit)
