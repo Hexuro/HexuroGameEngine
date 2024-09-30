@@ -1,2 +1,5 @@
 # Hexuro Game Engine
-<img src="Logo.svg" width="400" alt="Hexuro Engine logo">
+<picture>
+    <source media="(prefers-color-scheme: light)" srcset="./Logo_black.svg">
+	<source media="(prefers-color-scheme: dark)"  srcset="./Logo_white.svg">
+</picture>
