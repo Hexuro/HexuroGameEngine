@@ -7,10 +7,10 @@ namespace Hexuro {
         Layer(const std::string& name = "Unnamed layer");
         virtual ~Layer() = default;
 
-        void OnAttach() {}
-        void OnDetach() {}
-        //void OnUpdate(Timestep ts) {}
-        //void OnEvent(Event& event) {}
+        virtual void OnAttach() {}
+        virtual void OnDetach() {}
+        //virtual void OnUpdate(Timestep ts) {}
+        //virtual void OnEvent(Event& event) {}
 
         const std::string& GetName() const { return m_Name; }
     protected:

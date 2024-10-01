@@ -23,6 +23,7 @@
     <ClInclude Include="Renderer\OpenGL\EditorCamera.h" />
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\LayerStack.h" />
+    <ClInclude Include="Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />

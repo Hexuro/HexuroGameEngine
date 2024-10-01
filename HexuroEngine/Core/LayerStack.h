@@ -6,6 +6,9 @@
 namespace Hexuro {
     class LayerStack {
     public:
+        LayerStack() = default;
+        ~LayerStack();
+
         void PushLayer(Layer* layer);
         void PopLayer(Layer* layer);
 

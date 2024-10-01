@@ -104,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\LayerStack.h" />
+    <ClInclude Include="Core\Timestep.h" />
     <ClInclude Include="Renderer\OpenGL\EditorCamera.h" />
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Core\EntryPoint.h" />
