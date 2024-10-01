@@ -49,11 +49,11 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
+            m_Window.PollEvents();
+
             camera.Inputs(m_Window.GetHandle());
             camera.Matrix(90.0f, 0.1f, 100.0f, shader, "cameraMatrix", m_Window);
-
             Renderer::Render(VAO, EBO, shader, texture);
-            m_Window.PollEvents();
         }
 
         if (!Shutdown())
