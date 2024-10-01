@@ -3,13 +3,18 @@
 
 using namespace Hexuro;
 
+class SandboxApp;
+
+struct TestLayer : public Hexuro::Layer {
+
+};
+
 class SandboxApp : public Hexuro::Application {
 public:
     SandboxApp()
     {
-
+        PushLayer(new TestLayer());
     }
-    ~SandboxApp() override = default;
 };
 
 Hexuro::Application* Hexuro::CreateApplication() { return new SandboxApp; }

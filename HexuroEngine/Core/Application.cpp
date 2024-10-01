@@ -10,6 +10,11 @@
 #include "glm/gtc/type_ptr.hpp"
 
 namespace Hexuro {
+    void Application::PushLayer(Layer* layer)
+    {
+        m_LayerStack.PushLayer(layer);
+        layer->OnAttach();
+    }
 
     int Application::Run()
     {

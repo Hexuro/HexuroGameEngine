@@ -2,6 +2,8 @@
 #define _HEXURO_APPLICATION_
 
 #include "Renderer/Window.h"
+#include "Core/Layer.h"
+#include "Core/LayerStack.h"
 
 namespace Hexuro {
     class Application
@@ -10,12 +12,15 @@ namespace Hexuro {
         Application() = default;
         virtual ~Application() = default;
 
+        void PushLayer(Layer* layer);
+
         int Run();
         int Init();
         int Shutdown();
 
     private:
         Window m_Window;
+        LayerStack m_LayerStack;
     };
 
     // To be implemented by client

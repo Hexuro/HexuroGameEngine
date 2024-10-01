@@ -4,9 +4,12 @@
 /* Core */
 #include "Core/Application.h"
 #include "Core/EntryPoint.h"
+#include "Core/Layer.h"
+#include "Core/LayerStack.h"
 #include "Core/Log.h"
 #include "Core/Singleton.h"
 #include "Core/Timer.h"
+#include "Core/Timestep.h"
 #include "Core/Utils.h"
 
 /* Entity Component System */
