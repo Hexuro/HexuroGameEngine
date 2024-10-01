@@ -3,8 +3,6 @@
 
 using namespace Hexuro;
 
-class SandboxApp;
-
 struct TestLayer : public Hexuro::Layer {
 
 };
