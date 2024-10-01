@@ -21,6 +21,7 @@
     <ClInclude Include="Renderer\Color.h" />
     <ClInclude Include="Renderer\OpenGL\Texture.h" />
     <ClInclude Include="Renderer\OpenGL\EditorCamera.h" />
+    <ClInclude Include="Core\Layer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -38,5 +39,6 @@
     <ClCompile Include="Renderer\stb_image.cpp" />
     <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
     <ClCompile Include="Renderer\OpenGL\EditorCamera.cpp" />
+    <ClCompile Include="Core\Layer.cpp" />
   </ItemGroup>
 </Project>
