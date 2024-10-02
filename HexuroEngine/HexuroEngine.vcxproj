@@ -127,7 +127,6 @@
     <ClInclude Include="Renderer\OpenGL\Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Layer.cpp" />
     <ClCompile Include="Core\LayerStack.cpp" />
     <ClCompile Include="Renderer\OpenGL\EditorCamera.cpp" />
     <ClCompile Include="Core\Application.cpp" />

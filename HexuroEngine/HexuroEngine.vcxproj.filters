@@ -41,7 +41,6 @@
     <ClCompile Include="Renderer\stb_image.cpp" />
     <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
     <ClCompile Include="Renderer\OpenGL\EditorCamera.cpp" />
-    <ClCompile Include="Core\Layer.cpp" />
     <ClCompile Include="Core\LayerStack.cpp" />
   </ItemGroup>
 </Project>
