@@ -77,9 +77,9 @@ namespace Hexuro {
 
     int Application::Init()
     {
+        Hexuro::Log::Init();
         m_Window.Init(600, 600, "Hello, window!");
         Renderer::Init(m_Window);
-        InitializeLayers();
         return 0;
     }
 

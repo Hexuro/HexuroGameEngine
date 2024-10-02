@@ -13,13 +13,13 @@ namespace Hexuro {
         virtual ~Application() = default;
 
         void PushLayer(Layer* layer);
-
+        
         int Run();
-        int Init();
-        virtual void InitializeLayers() {}
         int Shutdown();
 
     protected:
+        int Init();
+
         Window m_Window;
         LayerStack m_LayerStack;
     };
