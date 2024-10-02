@@ -2,6 +2,7 @@
 #define _HEXURO_COMPONENTS_
 
 #include "Core/Utils.h"
+#include "Renderer/Color.h"
 #include <string>
 
 namespace Hexuro {
@@ -26,6 +27,9 @@ namespace Hexuro {
         operator std::string() { return tag; }
     };
 
+    struct SpriteComponent {
+        Color color;
+    };
 }
 
 #endif // !_HEXURO_COMPONENTS_

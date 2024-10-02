@@ -1,22 +1,27 @@
 #ifndef _HEXURO_APPLICATION_
 #define _HEXURO_APPLICATION_
 
-#include "../Renderer/Window.h"
+#include "Renderer/Window.h"
+#include "Core/Layer.h"
+#include "Core/LayerStack.h"
 
 namespace Hexuro {
     class Application
     {
     public:
         Application() = default;
-        Application(std::string projectFile); //TODO: Make this and make the editor app open fromm it's HexuroEditor.hexproj file
         virtual ~Application() = default;
 
+        void PushLayer(Layer* layer);
+
         int Run();
-
-    private:
         int Init();
+        virtual void InitializeLayers() {}
+        int Shutdown();
 
+    protected:
         Window m_Window;
+        LayerStack m_LayerStack;
     };
 
     // To be implemented by client
