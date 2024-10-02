@@ -16,9 +16,10 @@ namespace Hexuro {
 
         int Run();
         int Init();
+        virtual void InitializeLayers() {}
         int Shutdown();
 
-    private:
+    protected:
         Window m_Window;
         LayerStack m_LayerStack;
     };
