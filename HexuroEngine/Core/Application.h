@@ -6,6 +6,10 @@
 #include "Core/LayerStack.h"
 
 namespace Hexuro {
+    struct ApplicationSpecification {
+        std::string name;
+    };
+
     class Application
     {
     public:

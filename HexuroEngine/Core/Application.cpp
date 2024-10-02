@@ -64,7 +64,7 @@ namespace Hexuro {
         while (!m_Window.ShouldClose())
         {
             for (Layer* layer : m_LayerStack)
-                layer->OnUpdate();
+                layer->OnUpdate(Timestep());
             for (Layer* layer : m_LayerStack)
                 layer->OnRender();
 
