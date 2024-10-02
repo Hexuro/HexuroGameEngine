@@ -21,13 +21,13 @@ namespace Hexuro {
         glViewport(0, 0, width, height);
     }
 
-    void Renderer::Render(VertexArray VAO, IndexBuffer EBO, Shader shader, Texture TEX)
+    void Renderer::Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader, Texture texture)
     {
         shader.Activate();
-        TEX.Bind();
-        VAO.Bind();
+        texture.Bind();
+        vertexArray.Bind();
 
-        glDrawElements(GL_TRIANGLES, EBO.GetSize(), GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, indexBuffer.GetSize(), GL_UNSIGNED_INT, 0);
     }
 
     void Renderer::SetUniform1f(const Shader& shader, const char* uniform, GLfloat value)

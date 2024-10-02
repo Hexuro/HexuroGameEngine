@@ -8,7 +8,13 @@ namespace Hexuro {
     public:
         GLuint ID;
 
+
+        IndexBuffer() = default;
         IndexBuffer(GLuint* indices, GLsizeiptr size);
+        IndexBuffer(GLuint* indices);
+
+        static IndexBuffer Create(GLuint* indices, GLsizeiptr size) { return IndexBuffer(indices); }
+        static IndexBuffer Create(GLuint* indices)                  { return IndexBuffer(indices); }
 
         void Bind();
         void Unbind();

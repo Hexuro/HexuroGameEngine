@@ -11,7 +11,10 @@ namespace Hexuro {
     public:
         uint32_t ID;
 
+        Texture() = default;
         Texture(const char* filepath, bool genMipmap, GLenum slot, GLenum format);
+
+        Texture Create(const char* filepath, bool genMipmap, GLenum slot, GLenum format) { return Texture(filepath, genMipmap, slot, format); }
 
         void Bind()  { glBindTexture(GL_TEXTURE_2D, ID); }
         void UnBind() { glBindTexture(GL_TEXTURE_2D, 0); }

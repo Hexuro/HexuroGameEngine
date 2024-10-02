@@ -10,6 +10,14 @@ namespace Hexuro {
         m_BufferSize = size;
     }
 
+    IndexBuffer::IndexBuffer(GLuint* indices)
+    {
+        glGenBuffers(1, &ID);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ID);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+        m_BufferSize = sizeof(indices);
+    }
+
     void IndexBuffer::Bind()
     {
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ID);
