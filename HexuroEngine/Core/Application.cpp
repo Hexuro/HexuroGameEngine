@@ -2,7 +2,6 @@
 #include "Application.h"
 
 #include "Renderer/Renderer.h"
-#include "Renderer/OpenGL/EditorCamera.h"
 #include "stb/stb_image.h"
 
 #include "glm/glm.hpp"
@@ -63,8 +62,13 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
+            float time = Time::GetTime();
+            Timestep timestep = time - m_LastFrameTime;
+            m_LastFrameTime = time;
+
+
             for (Layer* layer : m_LayerStack)
-                layer->OnUpdate(Timestep());
+                layer->OnUpdate(m_LastFrameTime);
             for (Layer* layer : m_LayerStack)
                 layer->OnRender();
 

@@ -26,6 +26,8 @@ namespace Hexuro {
 
         Window m_Window;
         LayerStack m_LayerStack;
+
+        float m_LastFrameTime = 0.0f;
     };
 
     // To be implemented by client

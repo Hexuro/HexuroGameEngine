@@ -105,36 +105,37 @@
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\LayerStack.h" />
     <ClInclude Include="Core\Timestep.h" />
-    <ClInclude Include="Renderer\OpenGL\EditorCamera.h" />
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Core\EntryPoint.h" />
     <ClInclude Include="Core\Singleton.h" />
     <ClInclude Include="Core\Timer.h" />
     <ClInclude Include="Core\Utils.h" />
-    <ClInclude Include="Renderer\Color.h" />
     <ClInclude Include="Renderer\OpenGL\IndexBuffer.h" />
+    <ClInclude Include="Renderer\OpenGL\Shader.h" />
+    <ClInclude Include="Renderer\OpenGL\Texture.h" />
+    <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
     <ClInclude Include="Renderer\OpenGL\VertexBuffer.h" />
     <ClInclude Include="Renderer\Renderer.h" />
+    <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Scene\Entity.h" />
     <ClInclude Include="HexuroEngine.h" />
     <ClInclude Include="Core\Log.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\Components.h" />
-    <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
-    <ClInclude Include="Renderer\OpenGL\Shader.h" />
-    <ClInclude Include="Renderer\OpenGL\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\LayerStack.cpp" />
-    <ClCompile Include="Renderer\OpenGL\EditorCamera.cpp" />
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\Log.cpp" />
     <ClCompile Include="Renderer\OpenGL\IndexBuffer.cpp" />
+    <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
+    <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
+    <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
     <ClCompile Include="Renderer\OpenGL\VertexBuffer.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
     <ClCompile Include="Renderer\stb_image.cpp" />
+    <ClCompile Include="Renderer\Window.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="glad.cxx" />
     <ClCompile Include="pch.cpp">
@@ -143,11 +144,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="Renderer\Window.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
-    <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
-    <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
-    <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

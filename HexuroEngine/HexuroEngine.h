@@ -20,7 +20,6 @@
 /* Rendering */
 #include "Renderer/Window.h"
 #include "Renderer/Renderer.h"
-#include "Renderer/OpenGL/EditorCamera.h"
 
 /* Scripting */
 

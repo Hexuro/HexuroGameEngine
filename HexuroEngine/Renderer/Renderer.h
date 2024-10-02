@@ -14,11 +14,8 @@ namespace Hexuro {
     public:
         static int Init(Window& window);
 
-        static int Render(Scene* scene);
-        static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader);
-        static int Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader, Texture texture);
-
         static void FramebufferResizeCallback(GLFWwindow* window, int width, int height);
+        static void SetClearColor() {  }
 
         static void SetUniform1f(const Shader& shader, const char* uniform, GLfloat value);
 
