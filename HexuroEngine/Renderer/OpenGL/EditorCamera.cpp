@@ -12,7 +12,7 @@ namespace Hexuro {
         position = pos;
     }
 
-    void EditorCamera::Matrix(float zoom, float nearPlane, float farPlane, Shader& shader, const char* uniform, const Window& window)
+    void EditorCamera::Matrix(float zoom, float nearPlane, float farPlane, Shader& shader, const char* uniform)
     {
         glm::mat4 view = glm::mat4(1.0f);
         glm::mat4 projection = glm::mat4(1.0f);

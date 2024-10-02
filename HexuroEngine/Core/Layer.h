@@ -1,6 +1,8 @@
 #ifndef _HEXURO_LAYER_
 #define _HEXURO_LAYER_
 
+#include "Timestep.h"
+
 namespace Hexuro {
     class Layer {
     public:
@@ -9,6 +11,7 @@ namespace Hexuro {
 
         virtual void OnAttach() {}
         virtual void OnDetach() {}
+        virtual void OnUpdate() {}
         virtual void OnUpdate(Timestep ts) {}
         virtual void OnRender() {}
 

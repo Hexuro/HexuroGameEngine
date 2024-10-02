@@ -16,7 +16,7 @@ namespace Hexuro {
         Window() = default;
 
         int Init(int width, int height, const char* title);
-        void Update();
+        void OnUpdate();
 
         void PollEvents() { glfwPollEvents(); }
         bool ShouldClose();

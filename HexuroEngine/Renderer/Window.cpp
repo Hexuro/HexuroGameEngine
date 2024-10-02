@@ -36,7 +36,7 @@ namespace Hexuro {
         return 0;
     }
 
-    void Window::Update()
+    void Window::OnUpdate()
     {
         glClearColor(1, 1, 1, 1);
         glClear(GL_COLOR_BUFFER_BIT);

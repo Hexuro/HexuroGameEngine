@@ -18,7 +18,7 @@ namespace Hexuro {
         EditorCamera(uint32_t width, uint32_t height, glm::vec3 pos);
 
         // Updates and exports the camera matrix to the Vertex Shader
-        void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform, const Window& window);
+        void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shader, const char* uniform);
         void Inputs(GLFWwindow* window);
 
         glm::vec3 position;
