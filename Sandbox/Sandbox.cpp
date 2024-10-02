@@ -6,10 +6,8 @@ using namespace Hexuro;
 struct TestLayer : public Hexuro::Layer {
     void OnAttach() override {}             
     void OnDetach() override {}
-    void OnUpdate(Timestep ts) override {
-    }
-    void OnRender() override {
-    }
+    void OnUpdate(Timestep ts) override {}
+    void OnRender() override {}
 };
 
 class SandboxApp : public Hexuro::Application {
