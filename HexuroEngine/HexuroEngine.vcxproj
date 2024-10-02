@@ -110,6 +110,7 @@
     <ClInclude Include="Core\Singleton.h" />
     <ClInclude Include="Core\Timer.h" />
     <ClInclude Include="Core\Utils.h" />
+    <ClInclude Include="Renderer\Color.h" />
     <ClInclude Include="Renderer\OpenGL\IndexBuffer.h" />
     <ClInclude Include="Renderer\OpenGL\Shader.h" />
     <ClInclude Include="Renderer\OpenGL\Texture.h" />

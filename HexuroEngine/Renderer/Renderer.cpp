@@ -21,6 +21,15 @@ namespace Hexuro {
         glViewport(0, 0, width, height);
     }
 
+    void Renderer::Render(VertexArray VAO, IndexBuffer EBO, Shader shader, Texture TEX)
+    {
+        shader.Activate();
+        TEX.Bind();
+        VAO.Bind();
+
+        glDrawElements(GL_TRIANGLES, EBO.GetSize(), GL_UNSIGNED_INT, 0);
+    }
+
     void Renderer::SetUniform1f(const Shader& shader, const char* uniform, GLfloat value)
     {
         glUseProgram(shader.ID); //TODO: Remove

@@ -22,6 +22,7 @@
     <ClInclude Include="Renderer\OpenGL\VertexBuffer.h" />
     <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="Renderer\Window.h" />
+    <ClInclude Include="Renderer\Color.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
