@@ -15,11 +15,6 @@
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\LayerStack.h" />
     <ClInclude Include="Core\Timestep.h" />
-    <ClInclude Include="Renderer\OpenGL\IndexBuffer.h" />
-    <ClInclude Include="Renderer\OpenGL\Shader.h" />
-    <ClInclude Include="Renderer\OpenGL\Texture.h" />
-    <ClInclude Include="Renderer\OpenGL\VertexArray.h" />
-    <ClInclude Include="Renderer\OpenGL\VertexBuffer.h" />
     <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Renderer\Color.h" />
@@ -32,11 +27,6 @@
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="Core\LayerStack.cpp" />
-    <ClCompile Include="Renderer\OpenGL\IndexBuffer.cpp" />
-    <ClCompile Include="Renderer\OpenGL\Shader.cpp" />
-    <ClCompile Include="Renderer\OpenGL\Texture.cpp" />
-    <ClCompile Include="Renderer\OpenGL\VertexArray.cpp" />
-    <ClCompile Include="Renderer\OpenGL\VertexBuffer.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
     <ClCompile Include="Renderer\stb_image.cpp" />
     <ClCompile Include="Renderer\Window.cpp" />

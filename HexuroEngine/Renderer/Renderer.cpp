@@ -20,19 +20,4 @@ namespace Hexuro {
     {
         glViewport(0, 0, width, height);
     }
-
-    void Renderer::Render(VertexArray vertexArray, IndexBuffer indexBuffer, Shader shader, Texture texture)
-    {
-        shader.Activate();
-        texture.Bind();
-        vertexArray.Bind();
-
-        glDrawElements(GL_TRIANGLES, indexBuffer.GetSize(), GL_UNSIGNED_INT, 0);
-    }
-
-    void Renderer::SetUniform1f(const Shader& shader, const char* uniform, GLfloat value)
-    {
-        glUseProgram(shader.ID); //TODO: Remove
-        glUniform1f(glGetUniformLocation(shader.ID, uniform), value);
-    }
 }
