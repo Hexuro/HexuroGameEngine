@@ -38,11 +38,11 @@ namespace Hexuro {
 
     void Window::OnUpdate()
     {
-        glClearColor(1, 1, 1, 1);
+        glad_glClearColor(1, 1, 1, 1);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(m_WindowHandle);
-        glfwPollEvents();
+        PollEvents();
     }
 
     bool Window::ShouldClose()

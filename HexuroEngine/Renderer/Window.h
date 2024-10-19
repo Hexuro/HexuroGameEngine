@@ -6,9 +6,6 @@
 #include "Core/Log.h"
 
 namespace Hexuro {
-    namespace Callbacks {
-
-    }
 
     class Window
     {

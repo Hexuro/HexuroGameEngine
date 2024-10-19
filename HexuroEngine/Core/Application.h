@@ -6,22 +6,28 @@
 #include "Core/LayerStack.h"
 
 namespace Hexuro {
-    class Application
-    {
+    struct ApplicationSpecification {
+        std::string name;
+    };
+
+    class Application  {
     public:
         Application() = default;
         virtual ~Application() = default;
 
+        virtual void InitLayers() = 0;
         void PushLayer(Layer* layer);
-
+        
         int Run();
-        int Init();
-        virtual void InitializeLayers() {}
         int Shutdown();
 
     protected:
+        int Init();
+
         Window m_Window;
         LayerStack m_LayerStack;
+
+        float m_LastFrameTime = 0.0f;
     };
 
     // To be implemented by client

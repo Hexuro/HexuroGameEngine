@@ -2,8 +2,8 @@
 #include "Application.h"
 
 #include "Renderer/Renderer.h"
-#include "Renderer/OpenGL/EditorCamera.h"
 #include "stb/stb_image.h"
+#include "../Core/Utils.h"
 
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -63,8 +63,13 @@ namespace Hexuro {
 
         while (!m_Window.ShouldClose())
         {
+            float time = Time::GetTime();
+            Timestep timestep = time - m_LastFrameTime;
+            m_LastFrameTime = time;
+
+
             for (Layer* layer : m_LayerStack)
-                layer->OnUpdate();
+                layer->OnUpdate(m_LastFrameTime);
             for (Layer* layer : m_LayerStack)
                 layer->OnRender();
 
@@ -77,14 +82,17 @@ namespace Hexuro {
 
     int Application::Init()
     {
+        Hexuro::Log::Init();
         m_Window.Init(600, 600, "Hello, window!");
         Renderer::Init(m_Window);
-        InitializeLayers();
+        InitLayers();
         return 0;
     }
 
     int Application::Shutdown()
     {
+        for (Layer* layer : m_LayerStack)
+            layer->OnDetach();
         HX_ENGINE_INFO("Succesfully terminated the application");
         return 0;
     }
