@@ -85,11 +85,14 @@ namespace Hexuro {
         Hexuro::Log::Init();
         m_Window.Init(600, 600, "Hello, window!");
         Renderer::Init(m_Window);
+        InitLayers();
         return 0;
     }
 
     int Application::Shutdown()
     {
+        for (Layer* layer : m_LayerStack)
+            layer->OnDetach();
         HX_ENGINE_INFO("Succesfully terminated the application");
         return 0;
     }

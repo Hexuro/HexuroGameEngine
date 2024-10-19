@@ -10,12 +10,12 @@ namespace Hexuro {
         std::string name;
     };
 
-    class Application
-    {
+    class Application  {
     public:
         Application() = default;
         virtual ~Application() = default;
 
+        virtual void InitLayers() = 0;
         void PushLayer(Layer* layer);
         
         int Run();

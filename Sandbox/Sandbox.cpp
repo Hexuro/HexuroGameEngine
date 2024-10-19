@@ -5,15 +5,15 @@ using namespace std;
 using namespace Hexuro;
 
 struct TestLayer : public Hexuro::Layer {
-    void OnAttach() override {}             
-    void OnDetach() override {}
-    void OnUpdate(Timestep ts) override {}
-    void OnRender() override {}
+    void OnAttach() override { HX_GAME_INFO("Pushed layer"); }  
+    void OnDetach() override { HX_GAME_INFO("Detatched layer"); }
+    void OnUpdate(Timestep ts) override { }
+    void OnRender() override { }
 };
 
 class SandboxApp : public Hexuro::Application {
 public:
-    SandboxApp() {
+    void InitLayers() {
         PushLayer(new TestLayer());
     }
 };
