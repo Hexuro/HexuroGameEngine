@@ -2,6 +2,7 @@
 #include "Application.h"
 
 #include "Renderer/Renderer.h"
+#include "Events/ApplicationEvent.h"
 #include "stb/stb_image.h"
 #include "../Core/Utils.h"
 

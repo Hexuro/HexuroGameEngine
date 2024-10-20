@@ -18,6 +18,12 @@
     <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="Renderer\Window.h" />
     <ClInclude Include="Renderer\Color.h" />
+    <ClInclude Include="Renderer\VertexBuffer.h" />
+    <ClInclude Include="Events\Event.h" />
+    <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Events\KeyEvent.h" />
+    <ClInclude Include="Events\MouseEvent.h" />
+    <ClInclude Include="Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
