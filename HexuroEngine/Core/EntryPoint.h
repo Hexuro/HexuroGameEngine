@@ -8,6 +8,8 @@ extern Hexuro::Application* Hexuro::CreateApplication();
 
 int main(int argc, char** argv)
 {
+    // Initialize
+    Hexuro::Log::Init();
     Hexuro::Application* app = Hexuro::CreateApplication();
     return app->Run();
 }
