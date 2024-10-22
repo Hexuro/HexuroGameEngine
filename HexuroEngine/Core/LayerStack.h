@@ -2,6 +2,7 @@
 #define _HEXURO_LAYERSTACK_
 
 #include "Layer.h"
+#include <vector>
 
 namespace Hexuro {
     class LayerStack {

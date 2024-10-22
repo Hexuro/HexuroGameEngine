@@ -18,8 +18,6 @@
 #include "Scene/Components.h"
 
 /* Rendering */
-#include "Renderer/Window.h"
-#include "Renderer/Renderer.h"
 
 /* Scripting */
 

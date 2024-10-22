@@ -1,10 +1,11 @@
 #include "pch.h"
 #include "Application.h"
 
-#include "Renderer/Renderer.h"
 #include "Events/ApplicationEvent.h"
 #include "stb/stb_image.h"
 #include "../Core/Utils.h"
+#include "Core/Log.h"
+#include "Core/Window.h"
 
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -62,7 +63,7 @@ namespace Hexuro {
         //    Renderer::Render(VAO, EBO, shader, texture);
         //}
 
-        while (!m_Window.ShouldClose())
+        while (true)
         {
             float time = Time::GetTime();
             Timestep timestep = time - m_LastFrameTime;
@@ -74,7 +75,7 @@ namespace Hexuro {
             for (Layer* layer : m_LayerStack)
                 layer->OnRender();
 
-            m_Window.OnUpdate();
+            m_Window->OnUpdate();
         }
 
         if (!Shutdown())
@@ -83,9 +84,7 @@ namespace Hexuro {
 
     int Application::Init()
     {
-        m_Window.Init(600, 600, "Hello, window!");
-        Renderer::Init(m_Window);
-        InitLayers();
+        m_Window = std::unique_ptr<Window>(Window::Create());
         return 0;
     }
 

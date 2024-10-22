@@ -1,9 +1,8 @@
 #ifndef _HEXURO_APPLICATION_
 #define _HEXURO_APPLICATION_
 
-#include "Renderer/Window.h"
-#include "Core/Layer.h"
 #include "Core/LayerStack.h"
+#include "Core/Window.h"
 
 namespace Hexuro {
     struct ApplicationSpecification {
@@ -15,16 +14,15 @@ namespace Hexuro {
         Application() = default;
         virtual ~Application() = default;
 
-        virtual void InitLayers() = 0;
         void PushLayer(Layer* layer);
         
         int Run();
-        int Shutdown();
 
     protected:
         int Init();
+        int Shutdown();
 
-        Window m_Window;
+        std::unique_ptr<Window> m_Window;
         LayerStack m_LayerStack;
 
         float m_LastFrameTime = 0.0f;

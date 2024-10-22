@@ -10,7 +10,7 @@ namespace Hexuro {
     public:
         inline int GetKeyCode() const { return m_KeyCode; }
 
-        EVENT_CLASS_CATEGORY(Keyboard | Input)
+        EVENT_CLASS_CATEGORY(EKeyboard | EInput)
 
     protected:
         KeyEvent(int keyCode) : m_KeyCode(keyCode) {}

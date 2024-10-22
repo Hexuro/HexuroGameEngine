@@ -18,7 +18,7 @@ namespace Hexuro {
             return ss.str();
         }
         EVENT_CLASS_TYPE(WindowResize)
-        EVENT_CLASS_CATEGORY(Application)
+        EVENT_CLASS_CATEGORY(EApplication)
     private:
         unsigned int m_Width, m_Height;
     };
@@ -28,7 +28,7 @@ namespace Hexuro {
     public:
         WindowCloseEvent() {}
         EVENT_CLASS_TYPE(WindowClose)
-        EVENT_CLASS_CATEGORY(Application)
+        EVENT_CLASS_CATEGORY(EApplication)
     };
 }
 
