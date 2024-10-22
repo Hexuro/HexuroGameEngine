@@ -3,6 +3,7 @@
 
 #include "Core/LayerStack.h"
 #include "Core/Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Hexuro {
     struct ApplicationSpecification {
@@ -17,6 +18,7 @@ namespace Hexuro {
         void PushLayer(Layer* layer);
         
         int Run();
+        void OnEvent(Event& e);
 
     protected:
         int Init();
@@ -24,8 +26,10 @@ namespace Hexuro {
 
         std::unique_ptr<Window> m_Window;
         LayerStack m_LayerStack;
-
         float m_LastFrameTime = 0.0f;
+        bool m_Running = true;
+
+        bool OnWindowClose(WindowCloseEvent& event);
     };
 
     // To be implemented by client

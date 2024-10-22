@@ -6,7 +6,7 @@
 #include "pch.h" // Intellisense being weird
 
 namespace Hexuro {
-    class KeyEvent : Event {
+    class KeyEvent : public Event {
     public:
         inline int GetKeyCode() const { return m_KeyCode; }
 
