@@ -1,10 +1,11 @@
 #include "pch.h"
 #include "Application.h"
 
-#include "Renderer/Renderer.h"
 #include "Events/ApplicationEvent.h"
 #include "stb/stb_image.h"
 #include "../Core/Utils.h"
+#include "Core/Log.h"
+#include "Core/Window.h"
 
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -62,7 +63,7 @@ namespace Hexuro {
         //    Renderer::Render(VAO, EBO, shader, texture);
         //}
 
-        while (!m_Window.ShouldClose())
+        while (m_Running)
         {
             float time = Time::GetTime();
             Timestep timestep = time - m_LastFrameTime;
@@ -74,18 +75,25 @@ namespace Hexuro {
             for (Layer* layer : m_LayerStack)
                 layer->OnRender();
 
-            m_Window.OnUpdate();
+            m_Window->OnUpdate();
         }
 
         if (!Shutdown())
             return 0;
     }
 
+#define BIND_EVENT_FUNC(x) std::bind(&x, this, std::placeholders::_1)
+
+    void Application::OnEvent(Event& e)
+    {
+        EventDispatcher dispatcher(e);
+        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FUNC(Application::OnWindowClose));
+    }
+
     int Application::Init()
     {
-        m_Window.Init(600, 600, "Hello, window!");
-        Renderer::Init(m_Window);
-        InitLayers();
+        m_Window = std::unique_ptr<Window>(Window::Create());
+        m_Window->SetEventCallback(BIND_EVENT_FUNC(Application::OnEvent));
         return 0;
     }
 
@@ -95,5 +103,11 @@ namespace Hexuro {
             layer->OnDetach();
         HX_ENGINE_INFO("Succesfully terminated the application");
         return 0;
+    }
+
+    bool Application::OnWindowClose(WindowCloseEvent& event)
+    {
+        m_Running = false;
+        return false;
     }
 }

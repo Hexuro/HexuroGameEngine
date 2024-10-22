@@ -15,15 +15,13 @@
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\LayerStack.h" />
     <ClInclude Include="Core\Timestep.h" />
-    <ClInclude Include="Renderer\Renderer.h" />
-    <ClInclude Include="Renderer\Window.h" />
-    <ClInclude Include="Renderer\Color.h" />
-    <ClInclude Include="Renderer\VertexBuffer.h" />
+    <ClInclude Include="Core\Window.h" />
     <ClInclude Include="Events\Event.h" />
     <ClInclude Include="Core\Core.h" />
     <ClInclude Include="Events\KeyEvent.h" />
     <ClInclude Include="Events\MouseEvent.h" />
     <ClInclude Include="Events\ApplicationEvent.h" />
+    <ClInclude Include="Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Log.cpp" />
@@ -33,8 +31,6 @@
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\Entity.cpp" />
     <ClCompile Include="Core\LayerStack.cpp" />
-    <ClCompile Include="Renderer\Renderer.cpp" />
-    <ClCompile Include="Renderer\stb_image.cpp" />
-    <ClCompile Include="Renderer\Window.cpp" />
+    <ClCompile Include="Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

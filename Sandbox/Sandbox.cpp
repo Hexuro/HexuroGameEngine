@@ -26,7 +26,7 @@ struct TestLayer : public Hexuro::Layer {
 
 class SandboxApp : public Hexuro::Application {
 public:
-    void InitLayers() {
+    SandboxApp() {
         PushLayer(new TestLayer());
     }
 };

@@ -18,7 +18,7 @@ namespace Hexuro {
             return ss.str();
         }
         EVENT_CLASS_TYPE(MouseMoved)
-        EVENT_CLASS_CATEGORY(Mouse | Input)
+        EVENT_CLASS_CATEGORY(EMouse | EInput)
     private:
         float m_MouseX, m_MouseY;
     };
@@ -35,7 +35,7 @@ namespace Hexuro {
             return ss.str();
         }
         EVENT_CLASS_TYPE(MouseScrolled)
-        EVENT_CLASS_CATEGORY(Mouse | Input)
+        EVENT_CLASS_CATEGORY(EMouse | EInput)
     private:
         float m_XOffset, m_YOffset;
     };
@@ -43,7 +43,7 @@ namespace Hexuro {
     class MouseButtonEvent : public Event {
     public:
         inline int GetMouseButton() const { return m_Button; }
-        EVENT_CLASS_CATEGORY(Mouse | Input)
+        EVENT_CLASS_CATEGORY(EMouse | EInput)
     protected:
         MouseButtonEvent(int button) : m_Button(button) {}
         int m_Button;

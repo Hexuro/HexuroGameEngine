@@ -15,11 +15,11 @@ namespace Hexuro {
 
     enum EventCategory {
         None = 0,
-        Application = BIT(0),
-        Input       = BIT(1),
-        Keyboard    = BIT(2),
-        Mouse       = BIT(3),
-        MouseButton = BIT(4)
+        EApplication = BIT(0),
+        EInput       = BIT(1),
+        EKeyboard    = BIT(2),
+        EMouse       = BIT(3),
+        EMouseButton = BIT(4)
     };
 
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
